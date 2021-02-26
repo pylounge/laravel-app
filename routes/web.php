@@ -15,4 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index', ['name' => 'Max']);
-});
+})->name('index');
+
+Route::get('contacts', function () {
+    return view('contacts');
+})->name('contacts');

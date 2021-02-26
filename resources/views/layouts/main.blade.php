@@ -12,8 +12,11 @@
         <div class="title">Web-программирование</div>
         <nav>
             <ul>
+                <li>
+                    <a href="{{ route('index') }}">Главная</a>
+                </li>
                    <li>
-                       <a href="#">1</a>
+                       <a href="{{ route('contacts') }}">Контакты</a>
                    </li>
             </ul>
         </nav>
