@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use  App\Http\Controllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index', ['name' => 'Max']);
-})->name('index');
+Route::get('/', Controllers\IndexController::class)->name('index');
 
 Route::get('contacts', function () {
     return view('contacts');
