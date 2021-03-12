@@ -12,9 +12,18 @@ use  App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// routs
 Route::get('/', Controllers\IndexController::class)->name('index');
+
+
+// Route::get('contacts', function () {
+//     return view('contacts');
+// })->name('contacts')->middleware('auth');
 
 Route::get('contacts', function () {
     return view('contacts');
 })->name('contacts');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

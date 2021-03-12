@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
@@ -14,6 +15,12 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('index', ['name' => 'Max']);
+        $name = 'Guest';
+         if (Auth::check())
+         {
+            $user = $request->user();
+            $name = $user['name'];
+         }
+        return view('index', ['name' =>$name]);
     }
 }
