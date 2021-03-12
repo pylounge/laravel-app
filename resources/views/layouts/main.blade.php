@@ -40,6 +40,9 @@
                    <li>
                     <a href="{{ route('login') }}">Вход</a>
                    </li>
+                   <li>
+                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                </li>
                    @endguest
             </ul>
         </nav>
