@@ -19,6 +19,9 @@
                    <li>
                        <a href="{{ route('contacts') }}">Контакты</a>
                    </li>
+                   <li>
+                    <a href="{{ route('posts.index') }}">Посты</a>
+                </li>
                    <li style="flex-grow:1;"></li>
                    @auth
                    <li>
